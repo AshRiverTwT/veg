@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable App</title>
+    <link rel="stylesheet" href="styles.css">
+  <script src="new_script.js" ></script> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/vegiemart_logo.jpeg" alt="Logo">
+        </div>
+      
+        <div class="header-right">
+            <nav>
+                <div class="dropdown">
+                    <button class="dropbtn">Products <img src="images/drop_black.jpg" style="width:10px;height:10px;" alt="bg"></button>
+                    <div class="dropdown-content">
+                        <a href="#fresh-vegetables">Fresh Vegetables</a>
+                        <a href="#leafy-vegetables">Leafy Vegetables</a>
+                    </div>
+                </div>
+            </nav>
+            <a href="#order">
+            <button class="order-now">Order Now</button>
+            </a>
+            <a href="cart.html" target="_blank">
+            <button class="cart-icon">Your Cart</button>
+             </a>
+        </div>
+    </header>
+       <div style="float: right;">
+        <p> For Bulk Orders </p>
+        <a href="retailer.html" target="_blank">
+            <button class="order-now">Click here</button>
+            </a>
+       </div>
+    <main>
+        <section class="image-link">
+           
+            <a href="#vegetable-list">
+                <img src="images/ai_bg.jpg" alt="Vegetables" style="width:849px;height: 323px;">
+            </a>
+    
+        </section>
+        <section id="vegetable-list" style="display: none;">
+            <h1>Top picks</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/carrot.jpg" alt="Carrot" class="pop-image">
+                    <h3>Carrot</h3>
+                    <p>Rate: Rs 50/kg</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/spinach.jpg" alt="Spinach">
+                    <h3>Spinach</h3>
+                    <p>Rate: Rs 15</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/onion.jpg" alt="onion">
+                    <h3>Onion</h3>
+                    <p>Rate: Rs 20/kg</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/cucumber.jpg" alt="cucumber">
+                    <h3>cucumber</h3>
+                    <p>Rate: Rs 50/kg</p>
+                </div>
+                <div>
+                    <img src="images/potato.jpg" alt="potato">
+                    <h3>Potato</h3>
+                    <p>Rate: Rs 30/kg</p>
+                </div>
+                <!-- Add more vegetables as needed -->
+            </div>
+        </section>
+        <section id="fresh-vegetables">
+            <h1>Fresh Vegetables</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/carrot.jpg" alt="Carrot">
+                    <h3>Carrot</h3>
+                    <p>Rate: Rs 50/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this, 'carrot-quantity', 'Carrot', 50,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="carrot-quantity">Quantity:</label>
+                            <input type="number" id="carrot-quantity" name="carrot-quantity" min="1" max="10">
+                        </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/onion.jpg" alt="onion">
+                    <h3>Onion</h3>
+                    <p>Rate: Rs 20/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'onion-quantity','Onion',20,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="onion-quantity">Quantity:</label>
+                            <input type="number" id="onion-quantity" name="onion-quantity" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/cucumber.jpg" alt="cucumber">
+                    <h3>cucumber</h3>
+                    <p>Rate: Rs 50/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'cucumber-quantity','cucumber',50,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="cucumber-quantity">Quantity:</label>
+                            <input type="number" id="cucumber-quantity" name="cucumber-quantity" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/bittergourd.jpg" alt="bittergourd">
+                    <h3>bittergourd</h3>
+                    <p>Rate: Rs 50/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'bittergourd-quantity','bittergourd',50,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="bittergourd-quantity">Quantity:</label>
+                            <input type="number" id="bittergourd-quantity" name="bittergourd-quantity" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/bottlegourd.jpg" alt="bottlegourd">
+                    <h3>bottlegourd</h3>
+                    <p>Rate: Rs 50/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'bottlegourd','bottlegourd',50,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="bottlegourd">Quantity:</label>
+                            <input type="number" id="bottlegourd-quantity" name="bottlegourd-quantity" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/chilli.jpg" alt="chilli">
+                    <h3>chilli</h3>
+                    <p>Rate: Rs 30/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'chilli','chilli',30,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="chilli">Quantity:</label>
+                            <input type="number" id="chilli" name="chilli" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/brinjal.jpg" alt="Brinjal">
+                    <h3>Brinjal</h3>
+                    <p>Rate: Rs 50/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'brinjal-quantity','Brinjal',50,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="brinjal-quantity">Quantity:</label>
+                            <input type="number" id="brinjal-quantity" name="brinjal-quantity" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/potato.jpg" alt="potato">
+                    <h3>Potato</h3>
+                    <p>Rate: Rs 30/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'potato-quantity','Potato',30,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="potato-quantity">Quantity:</label>
+                            <input type="number" id="potato" name="potato" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/tomato.jpg" alt="tomato">
+                    <h3>Tomato</h3>
+                    <p>Rate: Rs 30/kg</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'tomato','tomato',30,)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="tomato">Quantity:</label>
+                            <input type="number" id="tomato" name="tomato" min="1" max="10">
+                        </div>
+                </div>
+            
+            
+            
+
+                <!-- Add more vegetables as needed -->
+            </div>
+
+        </section>
+
+        <section id="leafy-vegetables">
+            <h1>Leafy Vegetables</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/spinach.jpg" alt="spinach">
+                    <h3>Spinach /Palakura</h3>
+                    <p>Rate: Rs 10</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'spinach-quantity','Spinach',10)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="spinach-quantity">Quantity:</label>
+                            <input type="number" id="spinach-quantity" name="spinach-quantity" min="1" max="10">
+                        </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="images/coriander.jpeg" alt="coriander">
+                    <h3>coriander /Kothimera</h3>
+                    <p>Rate: Rs 10</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'coriander','coriander',10)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="coriander">Quantity:</label>
+                            <input type="number" id="coriander" name="coriander" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/curry_leaves.jpeg" alt="curry_leaves">
+                    <h3>curry leaves/Karvepaku</h3>
+                    <p>Rate: Rs 10</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'karvepaku','Karvepaku',10)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="Karvepaku">Quantity:</label>
+                            <input type="number" id="Karvepaku" name="Karvepaku" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/pudina.jpeg" alt="pudina">
+                    <h3>Pudina</h3>
+                    <p>Rate: Rs 20</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'pudina','pudina',20)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="pudina">Quantity:</label>
+                            <input type="number" id="pudina" name="pudina" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/menthi.jpeg" alt="menthi">
+                    <h3>Menthi</h3>
+                    <p>Rate: Rs 20</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'menthi','menthi',20)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="menthi">Quantity:</label>
+                            <input type="number" id="menthi" name="menthi" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/gongura.jpeg" alt="gongura">
+                    <h3>Gongura</h3>
+                    <p>Rate: Rs 20</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'gongura','gongura',20)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="gongura">Quantity:</label>
+                            <input type="number" id="gongura" name="gongura" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/amaranthus_thotakura.jpeg" alt="amaranthus_thotakura">
+                    <h3>Thotakura</h3>
+                    <p>Rate: Rs 15</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'Thotakura','Thotakura',15)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="Thotakura">Quantity:</label>
+                            <input type="number" id="Thotakura" name="Thotakura" min="1" max="10">
+                        </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/chukka_kura.jpeg" alt="chukka_kura">
+                    <h3>Chukka-kura</h3>
+                    <p>Rate: Rs 20</p>
+                    <button class="add-to-cart" onclick="showQuantity(this,'chukka-quantity','chukka',20)">Add to Cart</button>
+                        <div class="quantity-selector" style="display: none;">
+                            <label for="chukka">Quantity:</label>
+                            <input type="number" id="chukka-quantity" name="chukka-quantity" min="1" max="10">
+                        </div>
+                </div>
+                
+
+                <!-- Add more vegetables as needed -->
+            </div>
+
+        </section>
+        <section id="order" class="order">
+           
+            <h2>Place Your Order</h2>
+            <form id="orderForm" action="/order" method="post" onsubmit="return validateForm()">
+
+                <label for="Name"> Name<span class="required">*</span></label>
+                <div id="errorMessages" class="error-messages"></div>
+                <input type="text" id="Name" name="Name" required>
+                <div class="error" id="nameError"></div>
+        
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+        
+                <label for="phone">Phone Number<span class="required">*</span></label>
+                <input type="text" id="phone" name="phone" >
+                <div class="error" id="phoneError"></div>
+        
+                <fieldset>
+                    <legend> Address </legend>
+                    <div>
+                        <label for="flat_no">H.No / flat No </label>
+                        <input type="text" id="flat_no" name="flat_no">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="area">Area </label>
+                        <input type="text" id="area" name="area">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="city"> City/Town </label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="state"> State </label>
+                        <input type="text" id="state" name="state">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="pincode"> Pincode </label>
+                        <input type="text" id="pincode" name="pincode" required pattern="\d{6}" placeholder="Enter 6-digit pincode">
+                    </div>
+                    <div class="error" id="pincodeError"></div>
+                </fieldset>
+                <br>
+                <label for="is">Select Vegetables and Quantity</label>
+                <fieldset>
+                    <legend>Fresh vegetables</legend> <br>
+                   
+               
+             <div class="vegetable">
+                 <label for="brinjal">Brinjal - Rs35/kg</label>
+                 <input type="number" id="brinjalQty" name="brinjalQty" min="0" step="1" value="0">
+             </div>
+     
+             <div class="vegetable">
+                 <label for="tomato">Tomato - Rs25/kg</label>
+                 <input type="number" id="tomatoQty" name="tomatoQty" min="0" step="1" value="0">
+             </div>
+     
+             <div class="vegetable">
+                 <label for="carrot">Carrot - Rs40/kg</label>
+                 <input type="number" id="carrotQty" name="carrotQty" min="0" step="1" value="0">
+             </div>
+     
+             <div class="vegetable">
+                 <label for="cucumber">Cucumber - Rs80/kg</label>
+                 <input type="number" id="cucumberQty" name="cucumberQty" min="0" step="1" value="0">
+             </div>
+
+             <div class="vegetable">
+                <label for="onion">Onion - Rs35/kg</label>
+                <input type="number" id="onionQty" name="onionQty" min="0" step="1" value="0">
+            </div>
+
+            <div class="vegetable">
+                <label for="chili">Green Chilli - Rs80/kg</label>
+                <input type="number" id="chilliQty" name="chilliQty" min="0" step="1" value="0">
+            </div>
+        </fieldset>
+            <br>
+        <fieldset>
+            <legend> leafy vegetables</legend>
+            <div class="vegetable">
+                <label for="spinach-quantity">spinach:</label>
+                 <input type="number" id="spinach-quantity" name="spinach-quantity" min="0" max="10">
+            </div>
+    
+            <div class="vegetable">
+                <label for="coriander">coriander:</label>
+                <input type="number" id="coriander" name="coriander" min="1" max="10">
+            </div>
+    
+            <div class="vegetable">
+                <label for="Karvepaku">Karvepaku:</label>
+                <input type="number" id="Karvepaku" name="Karvepaku" min="1" max="10">
+            </div>
+    
+            <div class="vegetable">
+                <label for="pudina">pudina:</label>
+                <input type="number" id="pudina" name="pudina" min="1" max="10">
+            </div>
+        </fieldset>
+            <br>
+        <!--new code-->
+        <div id="totalCostContainer">
+            <label for="totalCost">Total Cost:</label>
+            <input type="text" id="totalCost" name="totalCost" readonly>
+            <!--<p id="totalCostText">Total Cost: Rs 0</p> -->
+        </div>
+        
+            <br>
+            <button type="submit" class="place-order" style="background-color: green;">Place Order</button>
+               
+        </form>
+    </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        document.querySelector('.image-link a').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('vegetable-list').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

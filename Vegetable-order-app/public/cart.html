@@ -1,0 +1,83 @@
+<!-- updated code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <script src="cart.js" defer></script> <!-- Link to your JavaScript -->
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cartContainer">
+        <p id="emptyMessage">Your cart is empty.</p>
+        <table id="cartTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Vegetable</th>
+                    <th>Quantity</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be populated here by cart.js -->
+            </tbody>
+        </table>
+    </div>
+    <div class="cart-buttons">
+        <a href="index.html" class="button">Continue Shopping</a>
+        <!--for direct checkout again not selecting the vegetables-->
+        <button onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+       
+        <!-- Proceed to Checkout button where it direct to order now form -->
+        <button id="proceed-to-checkout">order now</button>
+    </div>
+</body>
+<script>
+    document.getElementById('proceed-to-checkout').addEventListener('click', function() {
+        // Find the order form section in index.html
+        window.location.href = 'index.html#order'; // Scrolls to the order form section in index.html
+    });
+    </script>
+</html>
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Vegetable</th>
+                <th>Quantity</th>
+                <th>Total Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+             Cart items will be inserted here by JavaScript -->
+<!--      </tbody>
+    </table>
+    <button onclick="window.location.href='index.html'">Continue Shopping</button>
+    <button onclick="window.location.href='#order'">Proceed to Checkout</button>
+
+    <script src="cart.js"></script>
+</body>
+</html>
+-->
